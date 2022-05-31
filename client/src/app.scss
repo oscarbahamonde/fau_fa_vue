@@ -1,0 +1,86 @@
+@import url('@mdi/font/css/materialdesignicons.css');
+@import url('animate.css/animate.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lily+Script+One&family=Noto+Serif&family=Ubuntu+Mono&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: 'Lato', sans-serif;
+    
+    
+    
+
+}
+
+*.dark {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    background-color: black;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    @apply transition-all ease-in-out ;
+    @apply animate__animated animate__fadeIn;
+}
+
+
+i {
+    @apply mdi;
+}
+
+button {
+    @apply btn;
+}
+
+.font-sans {
+    font-family: 'Lato', sans-serif;
+}
+.font-serif {
+    font-family: 'Noto Serif', serif;
+}
+.font-mono {
+    font-family: 'Ubuntu Mono', monospace;
+}
+.font-script {
+    font-family: 'Lily Script One', cursive;
+}
+.row {
+    @apply flex flex-row;
+}
+.col {
+    @apply flex flex-col;
+}
+.debug{
+    @apply bg-black text-lime-400 font-sans  font-bold ;
+}
+.dropzone {
+    @apply border-2  border-dashed p-4 justify-start w-96 row;
+    &:hover {
+        @apply cursor-pointer;
+        @apply border-solid shadow-white shadow-md;
+    }
+}
+.upload {
+    @apply btn btn-primary btn-circle text-3xl text-white mx-8;
+
+    &:hover {
+        @apply scale-110 invert;
+    }
+}
+.user_email {
+    @apply font-mono text-sm font-bold ml-4;
+}
+.user_name {
+ @apply font-sans text-xl font-bold ml-4;
+}
+.user_info {
+    @apply flex flex-col items-center fixed h-36 pl-4 ;
+    @apply  p-4 rounded-lg w-full h-full;
+    @apply backdrop-blur-md w-96 rounded-none;
+    
+}
